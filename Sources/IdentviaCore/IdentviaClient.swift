@@ -188,10 +188,13 @@ public actor IdentviaClient {
     /// Emits the session whenever it changes (sign-in, refresh, sign-out).
     public func sessionUpdates() -> AsyncStream<IdentviaSession?> {
         let id = UUID()
-        return AsyncStream { c in
-            continuations[id] = c
-            c.onTermination = { [weak self] _ in Task { await self?.removeContinuation(id) } }
+        let (stream, c) = AsyncStream<IdentviaSession?>.makeStream()
+        continuations[id] = c
+        c.onTermination = { [weak self] _ in
+            guard let self else { return }
+            Task { await self.removeContinuation(id) }
         }
+        return stream
     }
 
     private func removeContinuation(_ id: UUID) { continuations[id] = nil }
