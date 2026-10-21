@@ -3,3 +3,7 @@
 *.xcodeproj/xcuserdata/
 DerivedData/
 Package.resolved
+.DS_Store
+*.xcarchive
+*.ipa
+live-*.json
