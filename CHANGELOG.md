@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1 (2026-10-21)
+
+- `sessionUpdates()` uses `AsyncStream.makeStream` with a non-optional `self` capture. It now compiles with Swift 5.10 (Sendable check) as well as 6.x.
+- CI: the Linux matrix (5.10, 6.0) has fail-fast off. The Apple (iOS/macOS) job builds green. Tightened `.gitignore`.
+
 ## 0.1.0 — 2026-10-21
 
 - First release.
