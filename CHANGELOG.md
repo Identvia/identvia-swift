@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2 (2026-11-05)
+
+- Examples: register the redirect on a **Native & desktop** portal client (public, PKCE; private-use schemes / App Links / loopback).
+
 ## 0.1.1 (2026-10-21)
 
 - `sessionUpdates()` uses `AsyncStream.makeStream` with a non-optional `self` capture. It now compiles with Swift 5.10 (Sendable check) as well as 6.x.

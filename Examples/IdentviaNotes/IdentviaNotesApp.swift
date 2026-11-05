@@ -1,7 +1,7 @@
 // A minimal SwiftUI app. In Xcode: File ▸ New ▸ Project ▸ App ("IdentviaNotes", bundle ID com.example.identvianotes),
 // add this package (File ▸ Add Package Dependencies… ▸ https://github.com/identvia/identvia-swift), and replace
 // the generated App file with this one. Register com.example.identvianotes:/oauth/identvia as a redirect URI
-// on a *public* Identvia client. No Info.plist URL type is needed: ASWebAuthenticationSession catches the callback.
+// on a Native & desktop (public) Identvia client. No Info.plist URL type is needed: ASWebAuthenticationSession catches the callback.
 import SwiftUI
 import Identvia
 
