@@ -1,5 +1,9 @@
 # Identvia for Swift
 
+[![Swift Package Manager](https://img.shields.io/github/v/tag/Identvia/identvia-swift?label=SwiftPM&sort=semver)](https://github.com/Identvia/identvia-swift/tags)
+[![CI](https://github.com/Identvia/identvia-swift/actions/workflows/ci.yml/badge.svg)](https://github.com/Identvia/identvia-swift/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Sign in with [Identvia](https://identvia.com) on iOS 15+, macOS 12+ and visionOS. OpenID Connect with PKCE in `ASWebAuthenticationSession` (the system browser, with Safari's cookies and passkeys), Keychain storage, refresh-token rotation, `async`/`await`, and a SwiftUI button.
 
 - **Public client.** Never ship a client secret in an app; this SDK has no secret option.
@@ -7,10 +11,10 @@ Sign in with [Identvia](https://identvia.com) on iOS 15+, macOS 12+ and visionOS
 
 ## Install
 
-Swift Package Manager:
+Swift Package Manager (in Xcode: **File → Add Package Dependencies…** and paste `https://github.com/Identvia/identvia-swift`), or in `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/identvia/identvia-swift", from: "0.1.0")
+.package(url: "https://github.com/Identvia/identvia-swift", from: "0.1.3")
 ```
 
 There are two products:
@@ -22,7 +26,7 @@ There are two products:
 
 ## 1. Register
 
-At <https://identvia.com/developers>, create a **public** (native) client and add one of these redirect URIs:
+At <https://id.identvia.com/developers>, create a **public** (native) client and add one of these redirect URIs:
 
 - `com.example.app:/oauth/identvia`: a reverse-domain custom scheme. Works on iOS 15+, and no Info.plist entry is needed.
 - `https://app.example.com/oauth/identvia`: needs iOS 17.4 / macOS 14.4 and associated domains (`webcredentials:`/`applinks:`).

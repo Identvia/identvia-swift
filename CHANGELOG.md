@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.3 (2026-11-09)
+
+- Public release for Swift Package Manager, installed from the `v0.1.3` git tag of `https://github.com/Identvia/identvia-swift`.
+- README: badges, Xcode install steps and the `Identvia` repository URL. No code changes.
+
 ## 0.1.2 (2026-11-05)
 
 - Examples: register the redirect on a **Native & desktop** portal client (public, PKCE; private-use schemes / App Links / loopback).
